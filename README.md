@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## This build followed the walk-throughs below:
 
-Things you may want to cover:
+### Step 1:
+* [Sort tables (almost) instantly with Ruby on Rails and Turbo Frames](https://www.colby.so/posts/sortable-table-with-rails-and-turbo-frames)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Step 2:
+* [Filter, search, and sort tables with Rails and Turbo Frames](https://www.colby.so/posts/filtering-tables-with-rails-and-hotwire)

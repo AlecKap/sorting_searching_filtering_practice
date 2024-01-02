@@ -4,7 +4,7 @@ include Filterable
 
   # GET /players or /players.json
   def index
-    @players = Player.all
+    @players = filter!(Player)
   end
 
   def list

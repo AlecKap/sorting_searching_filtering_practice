@@ -1,4 +1,5 @@
 class PlayersController < ApplicationController
+include Filterable
   before_action :set_player, only: %i[ show edit update destroy ]
 
   # GET /players or /players.json
@@ -7,9 +8,7 @@ class PlayersController < ApplicationController
   end
 
   def list
-    players = Player.includes(:team)
-    players = players.where('name ilike ?', "%#{params[:name]}%") if params[:name].present?
-    players = players.order("#{params[:column]} #{params[:direction]}")
+    players = filter!(Player)
     render(partial: 'players', locals: { players: players })
   end
 
@@ -73,5 +72,9 @@ class PlayersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def player_params
       params.require(:player).permit(:name, :team_id, :seasons)
+    end
+
+    def filter_params
+      params.permit(:name, :column, :direction)
     end
 end

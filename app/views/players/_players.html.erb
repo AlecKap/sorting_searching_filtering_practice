@@ -2,14 +2,17 @@
   <table class="min-w-full bg-white">
     <thead class="bg-gray-800 text-white">
       <tr>
-        <th id="players-name" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
-          <%= sort_link(column: "name", lable: "Name") %>
+        <th id="players-name" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <%= sort_indicator if params[:column] == "name" %>
+          <%= sort_link(column: "name", label: "Name") %>
         </th>
-        <th id="players-team" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
-          <%= sort_link(column: "teams.name", lable: "Team") %>
+        <th id="players-team" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <%= sort_indicator if params[:column] == "teams.name" %>
+          <%= sort_link(column: "teams.name", label: "Team") %>
         </th>
-        <th id="players-seasons" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
-          <%= sort_link(column: "seasons", lable: "Seasons") %>
+        <th id="players-seasons" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <%= sort_indicator if params[:column] == "seasons" %>
+          <%= sort_link(column: "seasons", label: "Seasons") %>
         </th>
       </tr>
     </thead>

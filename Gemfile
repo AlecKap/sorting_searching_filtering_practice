@@ -64,3 +64,11 @@ group :development do
   # gem "spring"
 end
 
+
+gem "tailwindcss-rails", "~> 2.1"
+
+gem "faker", "~> 3.2"
+
+gem "hotwire-rails", "~> 0.1.3"
+
+gem "pry", "~> 0.14.2"
